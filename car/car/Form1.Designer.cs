@@ -45,6 +45,9 @@
             this.BrakePedal = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.SpeedLabel = new System.Windows.Forms.Label();
+            this.MPGLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.rightOFF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightON)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftOFF)).BeginInit();
@@ -59,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BrakePedal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // rightOFF
@@ -219,11 +223,46 @@
             this.pictureBox8.TabIndex = 15;
             this.pictureBox8.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(428, 336);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(83, 102);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseEnter += new System.EventHandler(this.GasON);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.GasOFF);
+            // 
+            // SpeedLabel
+            // 
+            this.SpeedLabel.AutoSize = true;
+            this.SpeedLabel.Location = new System.Drawing.Point(653, 158);
+            this.SpeedLabel.Name = "SpeedLabel";
+            this.SpeedLabel.Size = new System.Drawing.Size(40, 16);
+            this.SpeedLabel.TabIndex = 17;
+            this.SpeedLabel.Text = "MPH:";
+            this.SpeedLabel.Click += new System.EventHandler(this.SpeedLabel_Click);
+            // 
+            // MPGLabel
+            // 
+            this.MPGLabel.AutoSize = true;
+            this.MPGLabel.Location = new System.Drawing.Point(656, 214);
+            this.MPGLabel.Name = "MPGLabel";
+            this.MPGLabel.Size = new System.Drawing.Size(40, 16);
+            this.MPGLabel.TabIndex = 18;
+            this.MPGLabel.Text = "MPG:";
+            this.MPGLabel.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.MPGLabel);
+            this.Controls.Add(this.SpeedLabel);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.BrakeRON);
             this.Controls.Add(this.BrakeLON);
             this.Controls.Add(this.pictureBox8);
@@ -255,7 +294,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.BrakePedal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -276,6 +317,9 @@
         private System.Windows.Forms.PictureBox BrakePedal;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label SpeedLabel;
+        private System.Windows.Forms.Label MPGLabel;
     }
 }
 

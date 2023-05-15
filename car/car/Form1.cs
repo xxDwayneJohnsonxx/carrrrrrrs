@@ -28,7 +28,7 @@ namespace car
             c.right = true;
 
         }
-        CAr c = new CAr();
+        CAr c = new CAr(40);
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (c.left)
@@ -39,6 +39,9 @@ namespace car
             {
                 rightON.Visible = !rightON.Visible;
             }
+            c.Drive();
+            SpeedLabel.Text= "MPH:" + c.speed.ToString();
+            MPGLabel.Text="MPG:"+c.mpg.ToString();
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
@@ -82,6 +85,26 @@ namespace car
             c.brake= false;
             BrakeLON.Visible = false;
             BrakeRON.Visible = false;
+        }
+
+        private void GasON(object sender, EventArgs e)
+        {
+            c.gas=true;
+        }
+
+        private void GasOFF(object sender, EventArgs e)
+        {
+            c.gas=false;
+        }
+
+        private void SpeedLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
